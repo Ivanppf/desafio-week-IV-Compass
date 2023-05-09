@@ -16,11 +16,11 @@ public class Quiz {
     }
 
     public Quiz() {
-        questions = new String[20];
-        answers = new String[20];
+        questions = new String[10];
+        answers = new String[questions.length];
         Random random = new Random();
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < questions.length; i++) {
 
             int n1 = random.nextInt(1, 100);
             int n2 = random.nextInt(1, 100);
@@ -82,7 +82,6 @@ public class Quiz {
         System.out.println("\nUser: " + name);
         System.out.println("right: " + right);
         System.out.println("wrong: " + wrong);
-
 
     }
 

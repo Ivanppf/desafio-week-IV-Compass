@@ -26,8 +26,6 @@ public class EmoticonsFeeling {
         else
             System.out.println("neutral");
 
-
-
     }
 
 }
