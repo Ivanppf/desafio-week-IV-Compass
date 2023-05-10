@@ -1,0 +1,30 @@
+tabela address
+
+CREATE TABLE Address (
+
+address_id SERIAL PRIMARY KEY,
+zip_code INTEGER,
+address VARCHAR(300),
+complement VARCHAR(250),
+neighborhood VARCHAR(250),
+city VARCHAR(100),
+state VARCHAR(100),
+country VARCHAR(100)
+
+)
+
+tabela person
+
+CREATE TABLE Person (
+
+person_id SERIAL PRIMARY KEY,
+name VARCHAR(50) NOT NULL,
+age INTEGER,
+phone VARCHAR(50),
+height FLOAT,
+email VARCHAR(250) UNIQUE,
+CPF VARCHAR(250) UNIQUE NOT NULL,
+birthday DATE NOT NULL,
+address_id INTEGER REFERENCES address(address_id)
+
+)
